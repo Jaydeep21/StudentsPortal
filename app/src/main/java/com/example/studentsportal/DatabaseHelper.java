@@ -6,10 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelper<openOrCreateDatabase> extends SQLiteOpenHelper {
 
-    public DatabaseHelper(Context context){ super(context,"Signup.db",null,1);}
+    public DatabaseHelper(Context context){ super(context,"StudentsPortal.db",null,1);
 
+    }
+    //openOrCreateDatabase("StudentsPortal.db",Context.);
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(username varchar(20),email text primary key, password varchar(20)) ");

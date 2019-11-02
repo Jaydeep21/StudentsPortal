@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         db = new DatabaseHelper(this);
+
         login = findViewById(R.id.login);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Boolean emailpassword = db.emailpassword(s1, s2);
 
-                if (emailpassword == true) {
+                if (emailpassword) {
                     pref = getSharedPreferences("user_details",MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putString("email",s1);

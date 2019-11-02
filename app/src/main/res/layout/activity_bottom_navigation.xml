@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".BottomNavigation"
     android:animateLayoutChanges="true"
-    android:background="@drawable/grad_bg"
+    android:background="@android:color/white"
     >
     <FrameLayout
         android:id="@+id/fragment_conatiner"

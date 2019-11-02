@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Signup extends AppCompatActivity {
-    Button signup;
+    Button signup, login;
     EditText username,email,pass,cpass,pnumber;
     DatabaseHelper db;
     SharedPreferences pref;
@@ -31,6 +31,14 @@ public class Signup extends AppCompatActivity {
         pass = findViewById(R.id.password);
         cpass = findViewById(R.id.cpassword);
 
+        login = findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Signup.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         signup = findViewById(R.id.signup);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
